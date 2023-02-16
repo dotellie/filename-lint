@@ -12,11 +12,11 @@
   "author": "Ellie Fagerberg <ellie@elliestudios.com>",
   "homepage": "https://github.com/dotellie/filename-lint#readme",
   "optionalDependencies": {
-    "app-linux-x64": "0.1.0",
-    "app-linux-arm64": "0.1.0",
-    "app-darwin-x64": "0.1.0",
-    "app-darwin-arm64": "0.1.0",
-    "app-windows-x64": "0.1.0",
-    "app-windows-arm64": "0.1.0"
+    "filename-lint-linux-x64": "0.1.0",
+    "filename-lint-linux-arm64": "0.1.0",
+    "filename-lint-darwin-x64": "0.1.0",
+    "filename-lint-darwin-arm64": "0.1.0",
+    "filename-lint-windows-x64": "0.1.0",
+    "filename-lint-windows-arm64": "0.1.0"
   }
 }
