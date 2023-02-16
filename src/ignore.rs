@@ -19,7 +19,6 @@ const DEFAULT_IGNORED_FILES: &[&str] = &[
     "Dockerfile",
     "docker-compose.yml",
     // Git/GitHub files
-    ".git",
     "README.md",
     "CONTRIBUTING.md",
     "CODE_OF_CONDUCT.md",
