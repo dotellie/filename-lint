@@ -139,6 +139,7 @@ jobs:
           export node_version="${{ env.RELEASE_VERSION }}"
           envsubst < package.json.tmpl > package.json
           rm package.json.tmpl
+          cp ../../README.md .
           npm install # requires optional dependencies to be present in the registry
           npm publish --access public
         env:

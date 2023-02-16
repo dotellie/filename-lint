@@ -3,6 +3,17 @@ name = "path-lint"
 version = "0.1.0"
 edition = "2021"
 repository = "https://github.com/dotellie/path-lint"
+license = "MIT"
+authors = ["Ellie Fagerberg <ellie@elliestudios.com>"]
+description = "Lint your project tree for filenames that don't match your conventions"
+homepage = "https://github.com/dotellie/path-lint#readme"
+readme = "README.md"
+keywords = ["path", "filename", "lint", "style", "casing", "case", "convention", "tree"]
+categories = ["command-line-utilities", "development-tools"]
+include = [
+    "**/*.rs",
+    "Cargo.toml",
+]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

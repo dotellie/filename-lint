@@ -1,11 +1,12 @@
 mod formats;
 mod ignore;
-mod special_ignore;
+mod special_cases;
 
 use anyhow::Result;
 use clap::Parser;
 use formats::{CheckResult, Format};
 use ignore::Ignore;
+use special_cases::{is_special_case, SpecialCase};
 use std::{fs, path::Path};
 
 #[derive(Parser, Debug)]
@@ -57,15 +58,26 @@ fn check_dir(
         let path = path.path();
 
         let path_string = path.file_name().unwrap().to_string_lossy();
+
         if ignore.is_ignored(&path) {
             continue;
         }
-        match formatting.check(&path_string) {
-            CheckResult::Ok => (),
-            CheckResult::Expected(expected) => {
-                invalid.push((path.to_string_lossy().into_owned(), expected))
-            }
-        };
+
+        match is_special_case(&path_string) {
+            Some(SpecialCase::Ignore) => continue,
+            Some(SpecialCase::LintSubset(subset)) => match formatting.check(&subset) {
+                CheckResult::Ok => (),
+                CheckResult::Expected(expected) => {
+                    invalid.push((path.to_string_lossy().into_owned(), expected))
+                }
+            },
+            None => match formatting.check(&path_string) {
+                CheckResult::Ok => (),
+                CheckResult::Expected(expected) => {
+                    invalid.push((path.to_string_lossy().into_owned(), expected))
+                }
+            },
+        }
 
         if path.is_dir() {
             let gitignore_path = path.join(".gitignore");

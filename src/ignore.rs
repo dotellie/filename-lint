@@ -1,23 +1,35 @@
 use anyhow::Result;
 use std::path::Path;
 
-use crate::special_ignore::special_ignore;
-
 const DEFAULT_IGNORED_FILES: &[&str] = &[
-    ".git",
+    // Node.js
     "yarn.lock",
     "package-lock.json",
+    // PHP
     "composer.lock",
     "composer.phar",
     "composer.json",
+    // Rust
     "Cargo.lock",
     "Cargo.toml",
+    // Ruby
     "Gemfile.lock",
     "Gemfile",
+    // Docker
     "Dockerfile",
     "docker-compose.yml",
+    // Git/GitHub files
+    ".git",
     "README.md",
+    "CONTRIBUTING.md",
+    "CODE_OF_CONDUCT.md",
+    "FUNDING.yml",
+    "ISSUE_TEMPLATE",
+    "PULL_REQUEST_TEMPLATE.md",
     "LICENSE",
+    "SECURITY.md",
+    "CODEOWNERS",
+    // Husky empty folder
     "_",
 ];
 
@@ -113,10 +125,6 @@ impl Ignore {
             if pattern.pattern.matches_path(resolved_path) {
                 return true;
             }
-        }
-
-        if special_ignore(path) {
-            return true;
         }
 
         false
