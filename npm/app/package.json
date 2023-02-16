@@ -1,22 +1,22 @@
 {
-  "name": "filename-lint",
-  "version": "0.1.0",
+  "name": "path-lint",
+  "version": "${node_version}",
   "bin": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dotellie/filename-lint.git"
+    "url": "git+https://github.com/dotellie/path-lint.git"
   },
   "bugs": {
-    "url": "https://github.com/dotellie/filename-lint/issues"
+    "url": "https://github.com/dotellie/path-lint/issues"
   },
   "author": "Ellie Fagerberg <ellie@elliestudios.com>",
-  "homepage": "https://github.com/dotellie/filename-lint#readme",
+  "homepage": "https://github.com/dotellie/path-lint#readme",
   "optionalDependencies": {
-    "filename-lint-linux-x64": "0.1.0",
-    "filename-lint-linux-arm64": "0.1.0",
-    "filename-lint-darwin-x64": "0.1.0",
-    "filename-lint-darwin-arm64": "0.1.0",
-    "filename-lint-windows-x64": "0.1.0",
-    "filename-lint-windows-arm64": "0.1.0"
+    "path-lint-linux-x64": "${node_version}",
+    "path-lint-linux-arm64": "${node_version}",
+    "path-lint-darwin-x64": "${node_version}",
+    "path-lint-darwin-arm64": "${node_version}",
+    "path-lint-windows-x64": "${node_version}",
+    "path-lint-windows-arm64": "${node_version}"
   }
 }

@@ -1,8 +1,8 @@
 [package]
-name = "filename-lint"
+name = "path-lint"
 version = "0.1.0"
 edition = "2021"
-repository = "https://github.com/dotellie/filename-lint"
+repository = "https://github.com/dotellie/path-lint"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

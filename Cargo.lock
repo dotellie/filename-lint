@@ -79,16 +79,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "filename-lint"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "clap",
- "glob",
- "heck",
-]
-
-[[package]]
 name = "glob"
 version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -151,6 +141,16 @@ name = "os_str_bytes"
 version = "6.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9b7820b9daea5457c9f21c69448905d723fbd21136ccf521748f23fd49e723ee"
+
+[[package]]
+name = "path-lint"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "clap",
+ "glob",
+ "heck",
+]
 
 [[package]]
 name = "proc-macro-error"
