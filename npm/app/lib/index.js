@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const { spawnSync } = require("child_process")
+const { spawnSync } = require("child_process");
 
 /**
  * Returns the executable path which is located inside `node_modules`
@@ -21,7 +21,7 @@ function getExePath() {
 
   try {
     // Since the binary will be located inside `node_modules`, we can simply call `require.resolve`
-    return require.resolve(`filename-${os}-${arch}/bin/app${extension}`);
+    return require.resolve(`path-lint-${os}-${arch}/bin/path-lint${extension}`);
   } catch (e) {
     throw new Error(
       `Couldn't find application binary inside node_modules for ${os}-${arch}`
