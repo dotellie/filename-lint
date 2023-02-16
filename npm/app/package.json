@@ -1,0 +1,22 @@
+{
+  "name": "filename-lint",
+  "version": "0.1.0",
+  "bin": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dotellie/filename-lint.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dotellie/filename-lint/issues"
+  },
+  "author": "Ellie Fagerberg <ellie@elliestudios.com>",
+  "homepage": "https://github.com/dotellie/filename-lint#readme",
+  "optionalDependencies": {
+    "app-linux-x64": "0.1.0",
+    "app-linux-arm64": "0.1.0",
+    "app-darwin-x64": "0.1.0",
+    "app-darwin-arm64": "0.1.0",
+    "app-windows-x64": "0.1.0",
+    "app-windows-arm64": "0.1.0"
+  }
+}

@@ -17,6 +17,7 @@ const DEFAULT_IGNORED_FILES: &[&str] = &[
     "Dockerfile",
     "docker-compose.yml",
     "README.md",
+    "LICENSE",
     "_",
 ];
 
@@ -105,11 +106,7 @@ impl Ignore {
         let pattern_path = Path::new(&pattern_path_string);
         for pattern in &self.ignore_patterns {
             let resolved_path = if let Some(base_path) = &pattern.base_path {
-                Path::new(
-                    pattern_path
-                        .strip_prefix(base_path)
-                        .unwrap_or(pattern_path),
-                )
+                Path::new(pattern_path.strip_prefix(base_path).unwrap_or(pattern_path))
             } else {
                 pattern_path
             };
