@@ -4,7 +4,14 @@ use std::path::Path;
 const DEFAULT_IGNORED_FILES: &[&str] = &[
     // Node.js
     "yarn.lock",
+    "package.json",
     "package-lock.json",
+    // JS
+    "vite.config.js",
+    "rollup.config.js",
+    "webpack.config.js",
+    "jest.config.js",
+    "tsconfig.json",
     // PHP
     "composer.lock",
     "composer.phar",
@@ -30,6 +37,8 @@ const DEFAULT_IGNORED_FILES: &[&str] = &[
     "CODEOWNERS",
     // Husky empty folder
     "_",
+    // Python
+    "__pycache__",
 ];
 
 #[derive(Clone)]
