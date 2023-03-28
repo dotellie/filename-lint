@@ -12,6 +12,14 @@ const DEFAULT_IGNORED_FILES: &[&str] = &[
     "webpack.config.js",
     "jest.config.js",
     "tsconfig.json",
+    // Next.js
+    "next.config.js",
+    "_app.tsx",
+    "_app.js",
+    "_app.jsx",
+    "_document.tsx",
+    "_document.js",
+    "_document.jsx",
     // PHP
     "composer.lock",
     "composer.phar",
