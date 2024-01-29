@@ -47,6 +47,8 @@ const DEFAULT_IGNORED_FILES: &[&str] = &[
     "_",
     // Python
     "__pycache__",
+    // Web
+    "apple_touch_icon.png",
 ];
 
 #[derive(Clone)]
